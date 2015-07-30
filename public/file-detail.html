@@ -1,0 +1,45 @@
+<h3 class="text-primary text-capitalize">{{file.equipo}}</h3>
+
+
+
+<div class="col-xs-11 col-sm-10 col-md-10 col-lg-11">
+    <ul class="nav nav-pills nav-justified">
+      <li ng-class="{active : tab === 1}"><a ng-click="tab=1">Jugadores</a></li>
+      <li ng-class="{active : tab === 2}"><a ng-click="tab=2">Directivos</a></li>
+    </ul>
+    <div ng-init="tab=1" class="tab-content contenedor-tab">
+      
+      <div ng-show="tab === 1">
+         <table class="table table-hover">
+            <tr class="active">
+              <th>Jugador</th>
+              <th>Goles</th>
+            </tr>
+            <tr class="espacios" ng-repeat="jugadores in file.jugadores">
+              <th>
+              <span class="partial">{{jugadores.nombre}}</span>  
+              </th>
+              <th>
+              <span class="partial">{{jugadores.goles}}</span>
+              </th>
+         
+            </tr>
+         </table>
+      </div>
+
+      <div ng-show="tab === 2">
+          <table class="table table-hover">
+          <tr class="active">
+              <th>Entrenador del Club</th>
+              <th>Presidente del Club</th>
+          </tr>
+          <tr>
+            <th>{{file.entrenador}}</th>
+            <th>{{file.presidente}}</th>
+          </tr>
+          
+          
+      </div>  
+
+   </div>
+</div>
