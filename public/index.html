@@ -63,8 +63,16 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <section>   
+    <section class="container">
+    <div class="row">
+      </br>
+      <div class="col-xs-6">  
+      <div>
+        <p>Clasificación general
+        </p>
+      </div>
       <table class="table table-hover">
+        </br>
         <tr class="active">
           <th>Nro</th>
           <th>Equipo</th>
@@ -90,6 +98,23 @@
           <td>{{country.gf - country.gc}}</td>
         </tr>
       </table>
+        <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=1641424632759595";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
+  
+      <div class="fb-like" data-href="https://www.facebook.com/supersnatly" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+      
+      </div>
+      <div class="col-xs-6">  
+          <img src="//wlbetclic.eacdn.com/wlbetclic/img/34cd36b3-c5a2-4f0d-9984-9e2029ca837b.gif">
+      </div>  
+    </div>
     </section>
 <!--     <label for="nombre"></label> NOMBRE
     <input type="text" name="nombre" ng-model="alumno.nombre"/>
